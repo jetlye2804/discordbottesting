@@ -9,7 +9,7 @@ import { BotGateway } from './bot.gateway';
         DiscordModule.forRootAsync({
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => ({
-                token: 'OTExOTE1NDkyODc5NTIzODQy.YZoVfA.ftxUNi3dMNnKMva4qA8oRq0PQ9w',
+                token: '',
                 commands: ['play.command.js', 'playlist.command.js'],
                 discordClientOptions: {
                     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
