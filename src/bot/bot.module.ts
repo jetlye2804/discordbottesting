@@ -17,7 +17,7 @@ import { BotGateway } from './bot.gateway';
                 removeGlobalCommands: true,
                 registerCommandOptions: [
                     {
-                        forGuild: '911603487610109973',
+                        forGuild: '',
                         allowFactory: (message: Message) =>
                             !message.author.bot && message.content === '!deploy',
                         removeCommandsBefore: true,
