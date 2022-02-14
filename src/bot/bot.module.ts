@@ -10,16 +10,15 @@ import { BotGateway } from './bot.gateway';
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => ({
                 token: '',
-                commands: ['play.command.js', 'playlist.command.js'],
+                commands: ['**/*.command.js'],
                 discordClientOptions: {
                     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
                 },
                 removeGlobalCommands: true,
                 registerCommandOptions: [
                     {
-                        forGuild: '',
-                        allowFactory: (message: Message) =>
-                            !message.author.bot && message.content === '!deploy',
+                        forGuild: '911603487610109973',
+                        allowFactory: (message: Message) => !message.author.bot,
                         removeCommandsBefore: true,
                     },
                 ],
